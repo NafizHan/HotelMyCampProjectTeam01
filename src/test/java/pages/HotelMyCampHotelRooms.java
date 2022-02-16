@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class HotelMyCampHotelRooms {
@@ -12,7 +13,22 @@ public class HotelMyCampHotelRooms {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
-    @FindBy(xpath = "//span[text()='Hotel Management']")
+
+    @FindBy(xpath = "//a[.='Log in']")
+    public WebElement anasayfaLoginButtonElementi;
+   @FindBy(xpath = "//input[@id='UserName']")
+   public WebElement usernameBox;
+
+   @FindBy(xpath = "//input[@id='Password']")
+   public WebElement passwordBox;
+
+   @FindBy(xpath = "//input[@id='btnSubmit']")
+    public WebElement loginButtonElementi;
+
+   @FindBy(xpath = "//span[.='List Of Hotelrooms']")
+    public  WebElement listOfHotelroomsYazisi;
+
+ @FindBy(xpath = "//span[text()='Hotel Management']")
     public WebElement hotelManagementButtonElementi;
 
     @FindBy(xpath = "//span[text()='Add User ']")
@@ -111,6 +127,16 @@ public class HotelMyCampHotelRooms {
 
       @FindBy(xpath = "//textarea[@id='txtBarcode']")
       public  WebElement valuePropertiesElementi;
+
+    public void loginOl() {
+
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
+        anasayfaLoginButtonElementi.click();
+        usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
+        passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
+        loginButtonElementi.click();
+
+    }
 
 
 
