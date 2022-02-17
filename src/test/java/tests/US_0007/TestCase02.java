@@ -11,7 +11,6 @@ public class TestCase02 {
     @Test
     public  void test02(){
         HotelMyCampHotelRooms hotelMyCampHotelRooms=new HotelMyCampHotelRooms();
-        hotelMyCampHotelRooms.loginOl();
         hotelMyCampHotelRooms.hotelManagementButtonElementi.click();
         Assert.assertTrue(hotelMyCampHotelRooms.hotelRoomsButtonElementi.isDisplayed());
 

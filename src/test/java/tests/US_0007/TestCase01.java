@@ -11,8 +11,10 @@ public class TestCase01 {
 
     @Test
     public void test01(){
-      HotelMyCampHotelRooms hotelMyCampHotelRooms=new HotelMyCampHotelRooms();
-      hotelMyCampHotelRooms.loginOl();
+
+
+        HotelMyCampHotelRooms hotelMyCampHotelRooms=new HotelMyCampHotelRooms();
+        hotelMyCampHotelRooms.loginOl();
 
 
     }

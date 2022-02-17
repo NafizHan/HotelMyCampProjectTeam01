@@ -10,8 +10,6 @@ public class TestCase03 {
 @Test
     public void test03(){
     HotelMyCampHotelRooms hotelMyCampHotelRooms=new HotelMyCampHotelRooms();
-    hotelMyCampHotelRooms.loginOl();
-    hotelMyCampHotelRooms.hotelManagementButtonElementi.click();
     hotelMyCampHotelRooms.hotelRoomsButtonElementi.click();
     Assert.assertTrue(hotelMyCampHotelRooms.listOfHotelroomsYazisi.isDisplayed());
 
